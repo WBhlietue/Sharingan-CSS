@@ -2,6 +2,17 @@ const main = document.getElementById("main");
 var autoChange = true;
 var actions = [];
 
+AutoSetSize()
+
+function AutoSetSize(){
+    const width = window.innerWidth
+    const height=  window.innerHeight
+    const m = Math.min(width, height);
+    const val = m / 550;
+    main.style.transform = "translate(-50%, -50%) scale(" + val + ")"
+    console.log(val);
+}
+
 function GetElement(style, id = "") {
   let item = document.createElement("div");
   item.className = "centerItems " + style;
