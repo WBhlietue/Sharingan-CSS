@@ -1,98 +1,226 @@
-:root{
-    --blurColor:#770000
+:root {
+  --blurColor: #770000;
 }
 
-#main{
-    position: fixed;
-    width: 500px;
-    height: 500px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    
+#main {
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
-.centerItems{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute
+.centerItems {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
 }
-.outline{
-    background-color: #ff0000;
-    border: 10px solid #000000;
-    box-shadow: inset 0px 0px 500px 0px var(--blurColor);
-    border-radius: 500px;
-    position: fixed;
-    width: 500px;
-    height: 500px;
+.outline {
+  background-color: #ff0000;
+  border: 10px solid #000000;
+  box-shadow: inset 0px 0px 500px 0px var(--blurColor);
+  border-radius: 500px;
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  overflow: hidden;
 }
-.markMainItem{
-    transform: translateY(-50%) rotateZ(50deg);
-    
+.markMainItem {
+  transform: translateY(-50%) rotateZ(50deg);
 }
-.markItem1{
+.markItem1 {
+  background-color: #000000;
+  height: 46px;
+  width: 51px;
+  border-radius: 100%;
+  transform: scaleX(0.9);
+}
+.markItem2 {
+  height: 50px;
+  width: 50px;
+  border-radius: 1000px;
+  transform: translateY(-50%);
+  box-shadow: -18px 5px 0px 5px black;
+  transform: translate(30%, -28%);
+  border-radius: 50%;
+}
+.blackCircle {
+  background-color: #000000;
+  height: 70px;
+  width: 70px;
+  border-radius: 1000px;
+  box-shadow: 0px 0px 100px 30px var(--blurColor);
+}
+.blackCircleLittle {
     background-color: #000000;
-    height: 46px;
-    width: 51px;
-    border-radius: 100%;
-    transform:  scaleX(0.9) ;
-}
-.markItem2{
-    height: 50px;
-    width: 50px;
-    border-radius: 1000px;
-    transform: translateY(-50%);
-    box-shadow: -18px 5px 0px 5px black  ;
-    transform: translate(30%, -28%);
-    border-radius: 50%;
-}
-.blackCircle{
-    background-color: #000000;
-    height: 70px;
-    width: 70px;
+    height: 30px;
+    width: 30px;
     border-radius: 1000px;
     box-shadow: 0px 0px 100px 30px var(--blurColor);
+  }
+.markOutline {
+  border: 5px solid black;
+  height: 300px;
+  width: 300px;
+  border-radius: 1000px;
+  align-items: flex-start;
 }
-.markOutline{
-    border: 5px solid black;
-    height: 300px;
+@keyframes Rotate {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+.markOutline1 {
+  border: 2px solid black;
+  height: 250px;
+  width: 250px;
+  border-radius: 1000px;
+}
+.markOutline2 {
+    border: 2px solid black;
+    height: 370px;
+    width: 370px;
+    border-radius: 1000px;
+  }
+.black {
+  background-color: #000000;
+}
+.noBoxShadow {
+  box-shadow: 0px 0px 0px 0px black;
+}
+.markOutlineParent {
+  animation: infinite Rotate 2s;
+}
+
+.markMangekyo1Item {
+  height: 350px;
+  width: 350px;
+  border-radius: 1000px 0px 1000px 0px;
+  background-color: #ff0000;
+  transform: scaleX(0.8) rotateZ(-45deg);
+}
+.markMangekyo1Item2 {
+  height: 350px;
+  width: 350px;
+  border-radius: 1000px 0px 1000px 0px;
+  border: 5px solid black;
+  transform: scaleX(0.8) rotateZ(-45deg);
+}
+.z5 {
+  z-index: 5;
+}
+.blackCircleEmpty {
+  height: 50px;
+  width: 50px;
+  border: 150px solid black;
+  border-radius: 1000px;
+}
+.blackCircleBig {
+  height: 80px;
+  width: 80px;
+  background-color: black;
+  border-radius: 1000px;
+  box-shadow: 0px 0px 100px 30px var(--blurColor);
+}
+.markMangekyo2Item {
+  height: 100px;
+  width: 100px;
+  background-color: black;
+  transform: translateY(200px);
+}
+.markMangekyo3Item {
+  height: 210px;
+  width: 210px;
+  border-radius: 1000px;
+  background-color: red;
+  transform: translateY(130px);
+}
+.redCircle {
+  background-color: #ff0000;
+  height: 70px;
+  width: 70px;
+  border-radius: 1000px;
+}
+.markMangekyo4Item {
+  height: 250px;
+  width: 250px;
+  border-radius: 0px 0px 1000px 0px;
+  background-color: black;
+  transform: translate(50px, 100px);
+}
+.markMangekyo4Item2 {
+  height: 300px;
+  width: 300px;
+  border-radius: 100%;
+  background-color: red;
+  background-image:
+        /* 10% = 126deg = 90 + ( 360 * .1 ) */ linear-gradient(
+      20deg,
+      transparent 50%,
+      black 50%
+    ),
+    linear-gradient(140deg, black 50%, transparent 50%);
+  transform: scaleY(0.5);
+}
+.markMangekyo4Item3 {
+  transform: translate(-75px, 11px) rotateZ(80deg);
+}
+.backBlack {
+  width: 250px;
+  height: 250px;
+  background-color: black;
+}
+.backBlackCircle {
     width: 300px;
+    height: 300px;
+    border-radius: 1000px;
+    background-color: black;
+  }
+
+.markMangekyo5Item {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 50px solid black;
+  margin: 2rem;
+  transform:  translate(107px, 140px)  rotateZ(45deg) ;
+}
+.markMangekyo6Item {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 50px solid black;
+    margin: 2rem;
+    transform: scaleY(2)
+  }
+  .markMangekyo6Item2 {
+    
+    transform: translate(107px, 140px)  rotateZ(145deg);
+  }
+  .markMangekyo7Item {
+    height: 400px;
+    width: 400px;
+    border-radius: 100%;
+    box-shadow: 50px 10px 0px 0px black;
+    transform: translate(-50px, 100px);
+  }
+  .markMangekyo7Item2 {
+    height: 500px;
+    width:  500px;
+    border-radius: 100%;
+    box-shadow: 2px -2px 0px 0px black;
+    transform: translate(100px, 130px) ;
+  }
+  .markMangekyo7Circle {
+    border: 5px solid black;
+    height: 170px;
+    width:  170px;
     border-radius: 1000px;
     align-items: flex-start;
-}
-@keyframes Rotate{
-    0%{
-        transform: rotateZ(0deg);
-    }
-    100%{
-        transform: rotateZ(360deg);
-    }
-}
-
-.black{
-    background-color: #000000;
-}
-.noBoxShadow{
-    box-shadow: 0px 0px 0px 0px black;
-}
-.markOutlineParent{
-    animation: infinite Rotate 2s ;
-}
-
-.markMangekyo1Item{
-    height: 350px;
-    width: 350px;
-    border-radius: 1000px 0px 1000px 0px;
-    background-color: #ff0000;
-    transform: scaleX(0.8) rotateZ(-45deg);
-}
-.markMangekyo1Item2{
-    height: 350px;
-    width: 350px;
-    border-radius: 1000px 0px 1000px 0px;
-    border: 5px solid black;
-    transform: scaleX(0.8) rotateZ(-45deg);
-}
-.z5{
-    z-index: 5;
-}
+  }
