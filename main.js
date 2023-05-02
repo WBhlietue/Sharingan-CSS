@@ -2,15 +2,14 @@ const main = document.getElementById("main");
 var autoChange = true;
 var actions = [];
 
-AutoSetSize()
+AutoSetSize();
 
-function AutoSetSize(){
-    const width = window.innerWidth
-    const height=  window.innerHeight
-    const m = Math.min(width, height);
-    const val = m / 550;
-    main.style.transform = "translate(-50%, -50%) scale(" + val + ")"
-    console.log(val);
+function AutoSetSize() {
+  const width = window.innerWidth;
+  const height = window.innerHeight;
+  const m = Math.min(width, height);
+  const val = m / 550;
+  main.style.transform = "translate(-50%, -50%) scale(" + val + ")";
 }
 
 function GetElement(style, id = "") {
@@ -279,9 +278,9 @@ function Mangekyo6() {
     let item = GetElement("markOutlineParent");
     item.appendChild(eyeBack);
     for (let i = 0; i < num; i++) {
-        let circle2 = GetElement("markOutline2");
+      let circle2 = GetElement("markOutline2");
       let circle = GetEyeElement1();
-      circle.appendChild(circle2)
+      circle.appendChild(circle2);
       circle.style.transform = "rotateZ(" + rotDiff * i + "deg)";
       item.appendChild(circle);
     }
@@ -292,41 +291,235 @@ function Mangekyo6() {
     let item1 = GetElement("markMangekyo6Item");
     let item2 = GetElement("markMangekyo6Item2");
     item2.appendChild(item1);
-    mainItem.appendChild(item2)
+    mainItem.appendChild(item2);
     return mainItem;
   }
 }
 function Mangekyo7() {
-    main.innerHTML = "";
-    var eyeOutline = GetElement("outline  noBoxShadow");
-    var eyeBack = GetElement("markMangekyo7Circle");
-    var eyeInner = GetInnerCircle(3);
-    var eyeBlackCircle1 = GetElement("blackCircle ");
-    eyeOutline.appendChild(eyeInner);
-    eyeOutline.appendChild(eyeBlackCircle1);
-  
-    main.appendChild(eyeOutline);
-    function GetInnerCircle(num) {
-      let rotDiff = 360 / num;
-      let item = GetElement("markOutlineParent");
-      item.appendChild(eyeBack);
-      for (let i = 0; i < num; i++) {
-        let circle = GetEyeElement1();
-        circle.style.transform = "rotateZ(" + rotDiff * i + "deg)";
-        item.appendChild(circle);
-      }
-      return item;
-    }
-    function GetEyeElement1() {
-      let mainItem = GetElement("markMainItem");
-      let item1 = GetElement("markMangekyo7Item");
+  main.innerHTML = "";
+  var eyeOutline = GetElement("outline  noBoxShadow");
+  var eyeBack = GetElement("markMangekyo7Circle");
+  var eyeInner = GetInnerCircle(3);
+  var eyeBlackCircle1 = GetElement("blackCircle ");
+  eyeOutline.appendChild(eyeInner);
+  eyeOutline.appendChild(eyeBlackCircle1);
 
-      let item2 = GetElement("markMangekyo7Item2");
-      mainItem.appendChild(item1);
-      mainItem.appendChild(item2)
-      return mainItem;
+  main.appendChild(eyeOutline);
+  function GetInnerCircle(num) {
+    let rotDiff = 360 / num;
+    let item = GetElement("markOutlineParent");
+    item.appendChild(eyeBack);
+    for (let i = 0; i < num; i++) {
+      let circle = GetEyeElement1();
+      circle.style.transform = "rotateZ(" + rotDiff * i + "deg)";
+      item.appendChild(circle);
     }
+    return item;
   }
+  function GetEyeElement1() {
+    let mainItem = GetElement("markMainItem");
+    let item1 = GetElement("markMangekyo7Item");
+
+    let item2 = GetElement("markMangekyo7Item2");
+    mainItem.appendChild(item1);
+    mainItem.appendChild(item2);
+    return mainItem;
+  }
+}
+function Mangekyo8() {
+  main.innerHTML = "";
+  var eyeOutline = GetElement("outline  noBoxShadow");
+  var eyeInner = GetInnerCircle(3);
+  var eyeBlackCircle1 = GetElement("blackCircle ");
+  eyeOutline.appendChild(eyeInner);
+  eyeOutline.appendChild(eyeBlackCircle1);
+
+  main.appendChild(eyeOutline);
+  function GetInnerCircle(num) {
+    let rotDiff = 360 / num;
+    let item = GetElement("markOutlineParent");
+    item.appendChild(GetElement("markMangekyo8Circle"));
+    for (let i = 0; i < num; i++) {
+      let circle = GetEyeElement1();
+      circle.style.transform = "rotateZ(" + rotDiff * i + "deg)";
+      item.appendChild(circle);
+    }
+    for (let i = 0; i < num; i++) {
+      let circle = GetEyeElement2();
+      circle.style.transform = "rotateZ(" + rotDiff * i + "deg)";
+      item.appendChild(circle);
+    }
+
+    return item;
+  }
+  function GetEyeElement1() {
+    let mainItem = GetElement("markMainItem");
+    let item2 = GetElement("markMangekyo8Item2");
+    mainItem.appendChild(item2);
+    let item3 = GetElement("markMangekyo8Item3");
+    mainItem.appendChild(item3);
+    let item4 = GetElement("markMangekyo8Item4");
+    mainItem.appendChild(item4);
+    let item5 = GetElement("markMangekyo8Item5");
+    mainItem.appendChild(item5);
+    let item6 = GetElement("markMangekyo8Item6");
+    mainItem.appendChild(item6);
+    let item7 = GetElement("markMangekyo8Item7");
+    mainItem.appendChild(item7);
+    return mainItem;
+  }
+  function GetEyeElement2() {
+    let mainItem = GetElement("markMainItem");
+    let item1 = GetElement("markMangekyo8Item1");
+    mainItem.appendChild(item1);
+    return mainItem;
+  }
+}
+function Mangekyo9() {
+  main.innerHTML = "";
+  var eyeOutline = GetElement("outline  noBoxShadow");
+  var eyeInner = GetInnerCircle(3);
+  var eyeBlackCircle1 = GetElement("redCircleBlur ");
+  eyeOutline.appendChild(eyeInner);
+  eyeOutline.appendChild(eyeBlackCircle1);
+
+  main.appendChild(eyeOutline);
+  function GetInnerCircle(num) {
+    let rotDiff = 360 / num;
+    let item = GetElement("markOutlineParent");
+    for (let i = 0; i < num; i++) {
+      let circle = GetEyeElement1();
+      circle.style.transform = "rotateZ(" + rotDiff * i + "deg)";
+      item.appendChild(circle);
+    }
+    for (let i = 0; i < num; i++) {
+      let circle = GetEyeElement2();
+      circle.style.transform = "rotateZ(" + rotDiff * i + "deg)";
+      item.appendChild(circle);
+    }
+
+    return item;
+  }
+  function GetEyeElement1() {
+    let mainItem = GetElement("markMainItem");
+    let item2 = GetElement("markMangekyo9Item2");
+    mainItem.appendChild(item2);
+    let item3 = GetElement("markMangekyo9Item3");
+    mainItem.appendChild(item3);
+    let item4 = GetElement("markMangekyo9Item4");
+    mainItem.appendChild(item4);
+    let item5 = GetElement("markMangekyo9Item5");
+    mainItem.appendChild(item5);
+    return mainItem;
+  }
+  function GetEyeElement2() {
+    let mainItem = GetElement("markMainItem");
+    let item1 = GetElement("markMangekyo9Item1");
+    mainItem.appendChild(item1);
+    return mainItem;
+  }
+}
+
+function Mangekyo10() {}
+
+function EternalSharingan1() {
+  main.innerHTML = "";
+  var eyeOutline = GetElement("outline  noBoxShadow");
+  var eyeInner = GetInnerCircle(3);
+  var eyeBlackCircle1 = GetElement("blackCircle ");
+  eyeOutline.appendChild(eyeInner);
+  eyeOutline.appendChild(eyeBlackCircle1);
+
+  main.appendChild(eyeOutline);
+  function GetInnerCircle(num) {
+    let rotDiff = 360 / num;
+    let item = GetElement("markOutlineParent");
+    item.appendChild(GetElement("markMangekyo8Circle"));
+    for (let i = 0; i < num; i++) {
+      let circle = GetEyeElement1();
+      circle.style.transform = "rotateZ(" + rotDiff * i + "deg)";
+      item.appendChild(circle);
+    }
+    for (let i = 0; i < num; i++) {
+      let circle = GetEyeElement2();
+      circle.style.transform = "rotateZ(" + rotDiff * i + "deg)";
+      item.appendChild(circle);
+    }
+    for (let i = 0; i < num; i++) {
+      let circle = GetEyeElement3();
+      circle.style.transform = "rotateZ(" + rotDiff * i + "deg)";
+      item.appendChild(circle);
+    }
+    return item;
+  }
+  function GetEyeElement1() {
+    let mainItem = GetElement("markMainItem");
+    let item2 = GetElement("markMangekyo8Item2");
+    mainItem.appendChild(item2);
+    let item3 = GetElement("markMangekyo8Item3");
+    mainItem.appendChild(item3);
+    let item4 = GetElement("markMangekyo8Item4");
+    mainItem.appendChild(item4);
+    let item5 = GetElement("markMangekyo8Item5");
+    mainItem.appendChild(item5);
+    let item6 = GetElement("markMangekyo8Item6");
+    mainItem.appendChild(item6);
+    let item7 = GetElement("markMangekyo8Item7");
+    mainItem.appendChild(item7);
+    return mainItem;
+  }
+  function GetEyeElement2() {
+    let mainItem = GetElement("markMainItem");
+    let item1 = GetElement("markMangekyo8Item1");
+    mainItem.appendChild(item1);
+    return mainItem;
+  }
+  function GetEyeElement3() {
+    let mainItem = GetElement("markMainItem");
+    let item1 = GetElement("markEternal1Item");
+    mainItem.appendChild(item1);
+    return mainItem;
+  }
+}
+
+function EternalSharingan2() {
+  main.innerHTML = "";
+  var eyeOutline = GetElement("outline black noBoxShadow");
+  var eyeInner = GetInnerCircle(3);
+  var eyeBlackCircle = GetElement("redCircle");
+  eyeOutline.appendChild(eyeInner);
+  eyeOutline.appendChild(eyeBlackCircle);
+  main.appendChild(eyeOutline);
+  function GetInnerCircle(num) {
+    let rotDiff = 360 / num;
+    let item = GetElement("markOutlineParent");
+    for (let i = 0; i < num; i++) {
+      let circle = GetEyeElement1();
+      circle.style.transform = "rotateZ(" + rotDiff * i + "deg)";
+      let outline = GetElement("z5");
+      let outlineItem = GetElement("markEternal2Item2");
+      outline.appendChild(outlineItem);
+      outline.style.transform = "rotateZ(" + rotDiff * i + "deg)";
+
+      item.appendChild(outline);
+      item.appendChild(circle);
+    }
+    for (let i = 0; i < num; i++) {
+      let markPar = GetElement("markEternal2Item4");
+      let mark = GetElement("markEternal2Item3");
+      markPar.appendChild(mark);
+      markPar.style.transform = "rotateZ(" + rotDiff * i + "deg)";
+      item.appendChild(markPar)
+    }
+    return item;
+  }
+  function GetEyeElement1() {
+    let mainItem = GetElement("markMainItem");
+    let item1 = GetElement("markEternal2Item1");
+    mainItem.appendChild(item1);
+    return mainItem;
+  }
+}
 
 actions.push(FirstEye1);
 actions.push(FirstEye2);
@@ -338,19 +531,20 @@ actions.push(Mangekyo4);
 actions.push(Mangekyo5);
 actions.push(Mangekyo6);
 actions.push(Mangekyo7);
+actions.push(Mangekyo8);
+actions.push(Mangekyo9);
+actions.push(EternalSharingan1);
+actions.push(EternalSharingan2)
 num = 0;
+actions[num % actions.length]();
+num++;
 if (autoChange) {
   setInterval(() => {
     actions[num % actions.length]();
     num++;
   }, 2000);
 } else {
-  // FirstEye();
-  // Mangekyo1();
-  // Mangekyo2();
-  // Mangekyo3()
-  // Mangekyo4()
-  // Mangekyo5();
-//   Mangekyo6();
-  Mangekyo7();
+  EternalSharingan1();
+  EternalSharingan2();
+  // Mangekyo2()
 }
