@@ -1,9 +1,13 @@
 const main = document.getElementById("main");
 var autoChange = true;
+var mask = true;
 var actions = [];
 
 AutoSetSize();
 
+function SetMask(){
+  document.getElementById("mask").style.animation = "MaskAni 2s infinite";
+}
 function AutoSetSize() {
   const width = window.innerWidth;
   const height = window.innerHeight;
@@ -520,6 +524,180 @@ function EternalSharingan2() {
     return mainItem;
   }
 }
+function RinneGan1() {
+  const sizes=[0, 75, 150, 225, 300, 375, 450, 525]
+  main.innerHTML = "";
+  var eyeOutline = GetElement("outlineRinnegan");
+  var eyeInner = GetInnerCircle(7);
+  eyeOutline.appendChild(eyeInner);
+  main.appendChild(eyeOutline);
+  function GetInnerCircle(num) {
+    let item = GetElement("markOutlineParent");
+    for (let i = 0; i < num; i++) {
+      let circle = GetEyeElement2(i);
+      
+      item.appendChild(circle);
+    }
+    let rotDiff = 360 / 3;
+    // for(let j = 0; j < 3; j++){
+    //   let a = GetEyeElement1(1);
+    //   console.log(rotDiff * j);
+    //   a.style.transform = "rotateZ(" + rotDiff * j + "deg)";
+    //   item.appendChild(a)
+    // }
+    return item;
+  }
+  function GetEyeElement1(i) {
+    let circle = GetElement("markOutline");
+    circle.style.border= "3px solid black"
+    circle.style.width = sizes[i] + "px"
+    circle.style.height = sizes[i] + "px"
+    
+    let mainItem = GetElement("markMainItem");
+    let item1 = GetElement("markItem1");
+    let item2 = GetElement("markItem2");
+    item1.appendChild(item2);
+    mainItem.appendChild(item1);
+    mainItem.style.transform = "scale(0.3)"
+    circle.appendChild(mainItem);
+    return circle;
+  }
+  function GetEyeElement2(i) {
+    let circle = GetElement("markOutline");
+    circle.style.border= (i === 0 ? 5:3)+ "px solid black"
+    circle.style.width = sizes[i] + "px"
+    circle.style.height = sizes[i] + "px"
+    let mainItem = GetElement("markMainItem");
+    let item1 = GetElement("markItem1");
+    let item2 = GetElement("markItem2");
+    // mainItem.appendChild(item1);
+    // item1.appendChild(item2);
+    circle.appendChild(mainItem);
+    return circle;
+  }
+}
+function RinneGan2() {
+  const sizes=[0, 75, 150, 225, 300, 375, 450, 525]
+  main.innerHTML = "";
+  var eyeOutline = GetElement("outlineRinnegan");
+  var eyeInner = GetInnerCircle(7);
+  eyeOutline.appendChild(eyeInner);
+  main.appendChild(eyeOutline);
+  function GetInnerCircle(num) {
+    let item = GetElement("markOutlineParent");
+    for (let i = 0; i < num; i++) {
+      let circle = GetEyeElement2(i);
+      
+      item.appendChild(circle);
+    }
+    let rotDiff = 360 / 3;
+    for(let j = 0; j < 3; j++){
+      let a = GetEyeElement1(1);
+      console.log(rotDiff * j);
+      a.style.transform = "rotateZ(" + rotDiff * j + "deg)";
+      item.appendChild(a)
+    }
+    for(let j = 0; j < 3; j++){
+      let a = GetEyeElement1(2);
+      console.log(rotDiff * j);
+      a.style.transform = "rotateZ(" + rotDiff * j + 180 + "deg)";
+      item.appendChild(a)
+    }
+    return item;
+  }
+  function GetEyeElement1(i) {
+    let circle = GetElement("markOutline");
+    circle.style.border= "3px solid black"
+    circle.style.width = sizes[i] + "px"
+    circle.style.height = sizes[i] + "px"
+    
+    let mainItem = GetElement("markMainItem");
+    let item1 = GetElement("markItem1");
+    let item2 = GetElement("markItem2");
+    item1.appendChild(item2);
+    mainItem.appendChild(item1);
+    mainItem.style.transform = "scale(0.3)"
+    circle.appendChild(mainItem);
+    return circle;
+  }
+  function GetEyeElement2(i) {
+    let circle = GetElement("markOutline");
+    circle.style.border= (i === 0 ? 5:3)+ "px solid black"
+    circle.style.width = sizes[i] + "px"
+    circle.style.height = sizes[i] + "px"
+    let mainItem = GetElement("markMainItem");
+    let item1 = GetElement("markItem1");
+    let item2 = GetElement("markItem2");
+    // mainItem.appendChild(item1);
+    // item1.appendChild(item2);
+    circle.appendChild(mainItem);
+    return circle;
+  }
+}
+function RinneSharingan1() {
+  const sizes=[0, 75, 150, 225, 300, 375, 450, 525]
+  main.innerHTML = "";
+  var eyeOutline = GetElement("outline noBoxShadow");
+  var eyeInner = GetInnerCircle(7);
+  eyeOutline.appendChild(eyeInner);
+  main.appendChild(eyeOutline);
+  function GetInnerCircle(num) {
+    let item = GetElement("markOutlineParent");
+    for (let i = 0; i < num; i++) {
+      let circle = GetEyeElement2(i);
+      
+      item.appendChild(circle);
+    }
+    let rotDiff = 360 / 3;
+    for(let j = 0; j < 3; j++){
+      let a = GetEyeElement1(1);
+      console.log(rotDiff * j);
+      a.style.transform = "rotateZ(" + rotDiff * j + "deg)";
+      item.appendChild(a)
+    }
+    for(let j = 0; j < 3; j++){
+      let a = GetEyeElement1(2);
+      console.log(rotDiff * j);
+      a.style.transform = "rotateZ(" + rotDiff * j + 180 + "deg)";
+      item.appendChild(a)
+    }
+    for(let j = 0; j < 3; j++){
+      let a = GetEyeElement1(3);
+      console.log(rotDiff * j);
+      a.style.transform = "rotateZ(" + rotDiff * j  + "deg)";
+      item.appendChild(a)
+    }
+    return item;
+  }
+  function GetEyeElement1(i) {
+    let circle = GetElement("markOutline");
+    circle.style.border= "3px solid black"
+    circle.style.width = sizes[i] + "px"
+    circle.style.height = sizes[i] + "px"
+    
+    let mainItem = GetElement("markMainItem");
+    let item1 = GetElement("markItem1");
+    let item2 = GetElement("markItem2");
+    item1.appendChild(item2);
+    mainItem.appendChild(item1);
+    mainItem.style.transform = "scale(0.3)"
+    circle.appendChild(mainItem);
+    return circle;
+  }
+  function GetEyeElement2(i) {
+    let circle = GetElement("markOutline");
+    circle.style.border= (i === 0 ? 5:3)+ "px solid black"
+    circle.style.width = sizes[i] + "px"
+    circle.style.height = sizes[i] + "px"
+    let mainItem = GetElement("markMainItem");
+    let item1 = GetElement("markItem1");
+    let item2 = GetElement("markItem2");
+    // mainItem.appendChild(item1);
+    // item1.appendChild(item2);
+    circle.appendChild(mainItem);
+    return circle;
+  }
+}
 
 actions.push(FirstEye1);
 actions.push(FirstEye2);
@@ -535,16 +713,26 @@ actions.push(Mangekyo8);
 actions.push(Mangekyo9);
 actions.push(EternalSharingan1);
 actions.push(EternalSharingan2)
+actions.push(RinneGan1);
+actions.push(RinneGan2)
+actions.push(RinneSharingan1)
 num = 0;
 actions[num % actions.length]();
 num++;
+if(mask){
+  SetMask();
+}
 if (autoChange) {
   setInterval(() => {
     actions[num % actions.length]();
+    if(mask){
+      SetMask();
+    }
     num++;
   }, 2000);
 } else {
-  EternalSharingan1();
-  EternalSharingan2();
+  // EternalSharingan1();
+  // EternalSharingan2();
+  RinneSharingan1();
   // Mangekyo2()
 }

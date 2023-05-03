@@ -26,6 +26,16 @@
   height: 500px;
   overflow: hidden;
 }
+.outlineRinnegan{
+  background-color: #876D8F;
+  border: 10px solid #000000;
+  /* box-shadow: inset 0px 0px 500px 0px var(--blurColor); */
+  border-radius: 500px;
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  overflow: hidden;
+}
 .markMainItem {
   transform: translateY(-50%) rotateZ(50deg);
 }
@@ -99,19 +109,18 @@ body{
   padding: 0;
   margin: 0;
 }
-.mask{
+#mask{
   width: 100vw;
   height: 100vh;
   position: fixed;
   background-color: #000000;
   opacity: 0;
-  animation: MaskAni 2s infinite;
 }
 @keyframes MaskAni{
   0%{
     opacity: 0;
   }
-  5%{
+  10%{
     opacity: 0;
   }
   50%{
@@ -120,7 +129,7 @@ body{
   60%{
     opacity: 0;
   }
-  80%{
+  90%{
     opacity: 1;
   }
   100%{
