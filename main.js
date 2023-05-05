@@ -11,6 +11,7 @@ function SettingsSet() {
   autoChange = document.getElementById("autoChange").checked;
   mask = document.getElementById("useMask").checked;
   let a = document.getElementById("select");
+  duration = document.getElementById("duration").value;
   document.getElementById("settings").style.display = "none";
   document.getElementById("open").style.display = "inline";
   Start(a.selectedIndex);
