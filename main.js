@@ -749,6 +749,7 @@ function Start(n) {
   if(timeInterval != null){
     clearInterval(timeInterval);
   }
+  document.getElementById("mask").style.animation = "";
   num = 0;
   actions[num % actions.length]();
   num++;
@@ -760,8 +761,6 @@ function Start(n) {
       actions[num % actions.length]();
       if (mask) {
         SetMask();
-      }else{
-        document.getElementById("mask").style.animation = "";
       }
       num++;
     }, duration * 1000);
