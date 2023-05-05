@@ -1,0 +1,11 @@
+#settings{
+    width: fit-content;
+    height: fit-content;
+    background-color: #a251ff;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    border: 10px rgb(86, 255, 179) solid;
+}

@@ -2,11 +2,22 @@ const main = document.getElementById("main");
 var autoChange = true;
 var mask = true;
 var actions = [];
+var timeInterval = null;
+var duration = 2;
 
 AutoSetSize();
 
-function SetMask(){
-  document.getElementById("mask").style.animation = "MaskAni 2s infinite";
+function SettingsSet() {
+  autoChange = document.getElementById("autoChange").checked;
+  mask = document.getElementById("useMask").checked;
+  let a = document.getElementById("select");
+  document.getElementById("settings").style.display = "none";
+  document.getElementById("open").style.display = "inline";
+  Start(a.selectedIndex);
+}
+
+function SetMask() {
+  document.getElementById("mask").style.animation = "MaskAni " + duration +"s infinite";
 }
 function AutoSetSize() {
   const width = window.innerWidth;
@@ -34,6 +45,7 @@ function FirstEye1() {
   function GetInnerCircle(num) {
     let rotDiff = 360 / num;
     let item = GetElement("markOutlineParent");
+    item.style.animation = "Rotate infinite " + duration + "s"
     for (let i = 0; i < num; i++) {
       let circle = GetEyeElement1();
       circle.style.transform = "rotateZ(" + rotDiff * i + "deg)";
@@ -63,6 +75,7 @@ function FirstEye2() {
   function GetInnerCircle(num) {
     let rotDiff = 360 / num;
     let item = GetElement("markOutlineParent");
+    item.style.animation = "Rotate infinite " + duration + "s"
     for (let i = 0; i < num; i++) {
       let circle = GetEyeElement1();
       circle.style.transform = "rotateZ(" + rotDiff * i + "deg)";
@@ -92,6 +105,7 @@ function FirstEye3() {
   function GetInnerCircle(num) {
     let rotDiff = 360 / num;
     let item = GetElement("markOutlineParent");
+    item.style.animation = "Rotate infinite " + duration + "s"
     for (let i = 0; i < num; i++) {
       let circle = GetEyeElement1();
       circle.style.transform = "rotateZ(" + rotDiff * i + "deg)";
@@ -122,6 +136,7 @@ function Mangekyo1() {
   function GetInnerCircle(num) {
     let rotDiff = 360 / num;
     let item = GetElement("markOutlineParent");
+    item.style.animation = "Rotate infinite " + duration + "s"
     for (let i = 0; i < num; i++) {
       let circle = GetEyeElement1();
       circle.style.transform = "rotateZ(" + rotDiff * i + "deg)";
@@ -153,6 +168,7 @@ function Mangekyo2() {
   function GetInnerCircle(num) {
     let rotDiff = 360 / num;
     let item = GetElement("markOutlineParent");
+    item.style.animation = "Rotate infinite " + duration + "s"
     for (let i = 0; i < num; i++) {
       let circle = GetEyeElement1();
       circle.style.transform = "rotateZ(" + rotDiff * i + "deg)";
@@ -180,6 +196,7 @@ function Mangekyo3() {
   function GetInnerCircle(num) {
     let rotDiff = 360 / num;
     let item = GetElement("markOutlineParent");
+    item.style.animation = "Rotate infinite " + duration + "s"
     for (let i = 0; i < num; i++) {
       let circle = GetEyeElement1();
       circle.style.transform = "rotateZ(" + rotDiff * i + "deg)";
@@ -205,6 +222,7 @@ function Mangekyo4() {
   function GetInnerCircle(num) {
     let rotDiff = 360 / num;
     let item = GetElement("markOutlineParent");
+    item.style.animation = "Rotate infinite " + duration + "s"
     for (let i = 0; i < num; i++) {
       let circle = GetEyeElement1();
       circle.style.transform = "rotateZ(" + rotDiff * i + "deg)";
@@ -245,6 +263,7 @@ function Mangekyo5() {
   function GetInnerCircle(num) {
     let rotDiff = 360 / num;
     let item = GetElement("markOutlineParent");
+    item.style.animation = "Rotate infinite " + duration + "s"
     item.appendChild(eyeBack);
     for (let i = 0; i < num; i++) {
       let circle = GetEyeElement1();
@@ -280,6 +299,7 @@ function Mangekyo6() {
   function GetInnerCircle(num) {
     let rotDiff = 360 / num;
     let item = GetElement("markOutlineParent");
+    item.style.animation = "Rotate infinite " + duration + "s"
     item.appendChild(eyeBack);
     for (let i = 0; i < num; i++) {
       let circle2 = GetElement("markOutline2");
@@ -312,6 +332,7 @@ function Mangekyo7() {
   function GetInnerCircle(num) {
     let rotDiff = 360 / num;
     let item = GetElement("markOutlineParent");
+    item.style.animation = "Rotate infinite " + duration + "s"
     item.appendChild(eyeBack);
     for (let i = 0; i < num; i++) {
       let circle = GetEyeElement1();
@@ -342,6 +363,7 @@ function Mangekyo8() {
   function GetInnerCircle(num) {
     let rotDiff = 360 / num;
     let item = GetElement("markOutlineParent");
+    item.style.animation = "Rotate infinite " + duration + "s"
     item.appendChild(GetElement("markMangekyo8Circle"));
     for (let i = 0; i < num; i++) {
       let circle = GetEyeElement1();
@@ -391,6 +413,7 @@ function Mangekyo9() {
   function GetInnerCircle(num) {
     let rotDiff = 360 / num;
     let item = GetElement("markOutlineParent");
+    item.style.animation = "Rotate infinite " + duration + "s"
     for (let i = 0; i < num; i++) {
       let circle = GetEyeElement1();
       circle.style.transform = "rotateZ(" + rotDiff * i + "deg)";
@@ -438,6 +461,7 @@ function EternalSharingan1() {
   function GetInnerCircle(num) {
     let rotDiff = 360 / num;
     let item = GetElement("markOutlineParent");
+    item.style.animation = "Rotate infinite " + duration + "s"
     item.appendChild(GetElement("markMangekyo8Circle"));
     for (let i = 0; i < num; i++) {
       let circle = GetEyeElement1();
@@ -497,6 +521,7 @@ function EternalSharingan2() {
   function GetInnerCircle(num) {
     let rotDiff = 360 / num;
     let item = GetElement("markOutlineParent");
+    item.style.animation = "Rotate infinite " + duration + "s"
     for (let i = 0; i < num; i++) {
       let circle = GetEyeElement1();
       circle.style.transform = "rotateZ(" + rotDiff * i + "deg)";
@@ -513,7 +538,7 @@ function EternalSharingan2() {
       let mark = GetElement("markEternal2Item3");
       markPar.appendChild(mark);
       markPar.style.transform = "rotateZ(" + rotDiff * i + "deg)";
-      item.appendChild(markPar)
+      item.appendChild(markPar);
     }
     return item;
   }
@@ -525,7 +550,7 @@ function EternalSharingan2() {
   }
 }
 function RinneGan1() {
-  const sizes=[0, 75, 150, 225, 300, 375, 450, 525]
+  const sizes = [0, 75, 150, 225, 300, 375, 450, 525];
   main.innerHTML = "";
   var eyeOutline = GetElement("outlineRinnegan");
   var eyeInner = GetInnerCircle(7);
@@ -533,9 +558,10 @@ function RinneGan1() {
   main.appendChild(eyeOutline);
   function GetInnerCircle(num) {
     let item = GetElement("markOutlineParent");
+    item.style.animation = "Rotate infinite " + duration + "s"
     for (let i = 0; i < num; i++) {
       let circle = GetEyeElement2(i);
-      
+
       item.appendChild(circle);
     }
     let rotDiff = 360 / 3;
@@ -549,24 +575,24 @@ function RinneGan1() {
   }
   function GetEyeElement1(i) {
     let circle = GetElement("markOutline");
-    circle.style.border= "3px solid black"
-    circle.style.width = sizes[i] + "px"
-    circle.style.height = sizes[i] + "px"
-    
+    circle.style.border = "3px solid black";
+    circle.style.width = sizes[i] + "px";
+    circle.style.height = sizes[i] + "px";
+
     let mainItem = GetElement("markMainItem");
     let item1 = GetElement("markItem1");
     let item2 = GetElement("markItem2");
     item1.appendChild(item2);
     mainItem.appendChild(item1);
-    mainItem.style.transform = "scale(0.3)"
+    mainItem.style.transform = "scale(0.3)";
     circle.appendChild(mainItem);
     return circle;
   }
   function GetEyeElement2(i) {
     let circle = GetElement("markOutline");
-    circle.style.border= (i === 0 ? 5:3)+ "px solid black"
-    circle.style.width = sizes[i] + "px"
-    circle.style.height = sizes[i] + "px"
+    circle.style.border = (i === 0 ? 5 : 3) + "px solid black";
+    circle.style.width = sizes[i] + "px";
+    circle.style.height = sizes[i] + "px";
     let mainItem = GetElement("markMainItem");
     let item1 = GetElement("markItem1");
     let item2 = GetElement("markItem2");
@@ -577,7 +603,7 @@ function RinneGan1() {
   }
 }
 function RinneGan2() {
-  const sizes=[0, 75, 150, 225, 300, 375, 450, 525]
+  const sizes = [0, 75, 150, 225, 300, 375, 450, 525];
   main.innerHTML = "";
   var eyeOutline = GetElement("outlineRinnegan");
   var eyeInner = GetInnerCircle(7);
@@ -585,46 +611,47 @@ function RinneGan2() {
   main.appendChild(eyeOutline);
   function GetInnerCircle(num) {
     let item = GetElement("markOutlineParent");
+    item.style.animation = "Rotate infinite " + duration + "s"
     for (let i = 0; i < num; i++) {
       let circle = GetEyeElement2(i);
-      
+
       item.appendChild(circle);
     }
     let rotDiff = 360 / 3;
-    for(let j = 0; j < 3; j++){
+    for (let j = 0; j < 3; j++) {
       let a = GetEyeElement1(1);
       console.log(rotDiff * j);
       a.style.transform = "rotateZ(" + rotDiff * j + "deg)";
-      item.appendChild(a)
+      item.appendChild(a);
     }
-    for(let j = 0; j < 3; j++){
+    for (let j = 0; j < 3; j++) {
       let a = GetEyeElement1(2);
       console.log(rotDiff * j);
       a.style.transform = "rotateZ(" + rotDiff * j + 180 + "deg)";
-      item.appendChild(a)
+      item.appendChild(a);
     }
     return item;
   }
   function GetEyeElement1(i) {
     let circle = GetElement("markOutline");
-    circle.style.border= "3px solid black"
-    circle.style.width = sizes[i] + "px"
-    circle.style.height = sizes[i] + "px"
-    
+    circle.style.border = "3px solid black";
+    circle.style.width = sizes[i] + "px";
+    circle.style.height = sizes[i] + "px";
+
     let mainItem = GetElement("markMainItem");
     let item1 = GetElement("markItem1");
     let item2 = GetElement("markItem2");
     item1.appendChild(item2);
     mainItem.appendChild(item1);
-    mainItem.style.transform = "scale(0.3)"
+    mainItem.style.transform = "scale(0.3)";
     circle.appendChild(mainItem);
     return circle;
   }
   function GetEyeElement2(i) {
     let circle = GetElement("markOutline");
-    circle.style.border= (i === 0 ? 5:3)+ "px solid black"
-    circle.style.width = sizes[i] + "px"
-    circle.style.height = sizes[i] + "px"
+    circle.style.border = (i === 0 ? 5 : 3) + "px solid black";
+    circle.style.width = sizes[i] + "px";
+    circle.style.height = sizes[i] + "px";
     let mainItem = GetElement("markMainItem");
     let item1 = GetElement("markItem1");
     let item2 = GetElement("markItem2");
@@ -635,7 +662,7 @@ function RinneGan2() {
   }
 }
 function RinneSharingan1() {
-  const sizes=[0, 75, 150, 225, 300, 375, 450, 525]
+  const sizes = [0, 75, 150, 225, 300, 375, 450, 525];
   main.innerHTML = "";
   var eyeOutline = GetElement("outline noBoxShadow");
   var eyeInner = GetInnerCircle(7);
@@ -643,52 +670,53 @@ function RinneSharingan1() {
   main.appendChild(eyeOutline);
   function GetInnerCircle(num) {
     let item = GetElement("markOutlineParent");
+    item.style.animation = "Rotate infinite " + duration + "s"
     for (let i = 0; i < num; i++) {
       let circle = GetEyeElement2(i);
-      
+
       item.appendChild(circle);
     }
     let rotDiff = 360 / 3;
-    for(let j = 0; j < 3; j++){
+    for (let j = 0; j < 3; j++) {
       let a = GetEyeElement1(1);
       console.log(rotDiff * j);
       a.style.transform = "rotateZ(" + rotDiff * j + "deg)";
-      item.appendChild(a)
+      item.appendChild(a);
     }
-    for(let j = 0; j < 3; j++){
+    for (let j = 0; j < 3; j++) {
       let a = GetEyeElement1(2);
       console.log(rotDiff * j);
       a.style.transform = "rotateZ(" + rotDiff * j + 180 + "deg)";
-      item.appendChild(a)
+      item.appendChild(a);
     }
-    for(let j = 0; j < 3; j++){
+    for (let j = 0; j < 3; j++) {
       let a = GetEyeElement1(3);
       console.log(rotDiff * j);
-      a.style.transform = "rotateZ(" + rotDiff * j  + "deg)";
-      item.appendChild(a)
+      a.style.transform = "rotateZ(" + rotDiff * j + "deg)";
+      item.appendChild(a);
     }
     return item;
   }
   function GetEyeElement1(i) {
     let circle = GetElement("markOutline");
-    circle.style.border= "3px solid black"
-    circle.style.width = sizes[i] + "px"
-    circle.style.height = sizes[i] + "px"
-    
+    circle.style.border = "3px solid black";
+    circle.style.width = sizes[i] + "px";
+    circle.style.height = sizes[i] + "px";
+
     let mainItem = GetElement("markMainItem");
     let item1 = GetElement("markItem1");
     let item2 = GetElement("markItem2");
     item1.appendChild(item2);
     mainItem.appendChild(item1);
-    mainItem.style.transform = "scale(0.3)"
+    mainItem.style.transform = "scale(0.3)";
     circle.appendChild(mainItem);
     return circle;
   }
   function GetEyeElement2(i) {
     let circle = GetElement("markOutline");
-    circle.style.border= (i === 0 ? 5:3)+ "px solid black"
-    circle.style.width = sizes[i] + "px"
-    circle.style.height = sizes[i] + "px"
+    circle.style.border = (i === 0 ? 5 : 3) + "px solid black";
+    circle.style.width = sizes[i] + "px";
+    circle.style.height = sizes[i] + "px";
     let mainItem = GetElement("markMainItem");
     let item1 = GetElement("markItem1");
     let item2 = GetElement("markItem2");
@@ -712,27 +740,34 @@ actions.push(Mangekyo7);
 actions.push(Mangekyo8);
 actions.push(Mangekyo9);
 actions.push(EternalSharingan1);
-actions.push(EternalSharingan2)
+actions.push(EternalSharingan2);
 actions.push(RinneGan1);
-actions.push(RinneGan2)
-actions.push(RinneSharingan1)
-num = 0;
-actions[num % actions.length]();
-num++;
-if(mask){
-  SetMask();
+actions.push(RinneGan2);
+actions.push(RinneSharingan1);
+
+function Start(n) {
+  if(timeInterval != null){
+    clearInterval(timeInterval);
+  }
+  num = 0;
+  actions[num % actions.length]();
+  num++;
+  if (mask) {
+    SetMask();
+  }
+  if (autoChange) {
+    timeInterval = setInterval(() => {
+      actions[num % actions.length]();
+      if (mask) {
+        SetMask();
+      }else{
+        document.getElementById("mask").style.animation = "";
+      }
+      num++;
+    }, duration * 1000);
+  } else {
+    actions[n]()
+  }
 }
-if (autoChange) {
-  setInterval(() => {
-    actions[num % actions.length]();
-    if(mask){
-      SetMask();
-    }
-    num++;
-  }, 2000);
-} else {
-  // EternalSharingan1();
-  // EternalSharingan2();
-  RinneSharingan1();
-  // Mangekyo2()
-}
+
+Start(0);

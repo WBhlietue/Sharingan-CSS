@@ -81,7 +81,7 @@
     transform: rotateZ(0deg);
   }
   100% {
-    transform: rotateZ(360deg);
+    transform: rotateZ(-360deg);
   }
 }
 .markOutline1 {
@@ -103,7 +103,7 @@
   box-shadow: 0px 0px 0px 0px black;
 }
 .markOutlineParent {
-  animation: infinite Rotate 2s;
+  /* animation: infinite Rotate 2s; */
 }
 body{
   padding: 0;
@@ -118,6 +118,9 @@ body{
 }
 @keyframes MaskAni{
   0%{
+    opacity: 1;
+  }
+  5%{
     opacity: 0;
   }
   10%{
@@ -126,14 +129,14 @@ body{
   50%{
     opacity: 0;
   }
-  60%{
+  80%{
     opacity: 0;
   }
-  90%{
+  95%{
     opacity: 1;
   }
   100%{
-    opacity: 0;
+    opacity: 1;
   }
 }
 .markMangekyo1Item {

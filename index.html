@@ -6,11 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="settings.css" />
   </head>
   <body>
-    <div id="main" class="centerItems">
-    </div>
+    <div id="main" class="centerItems"></div>
     <div id="mask"></div>
+    <button id="open" onclick="
+       document.getElementById('settings').style.display = 'inline'
+       document.getElementById('open').style.display = 'none'
+    " style="position: fixed; margin: 10px;">Set</button>
+    <div id="settings" style="display: none;">
+      <button
+        onclick="document.getElementById('settings').style.display = 'none'
+       document.getElementById('open').style.display = 'inline'"
+      >
+        X
+      </button>
+      <br />
+      <input type="checkbox" id="autoChange" checked />
+      <label>Auto Change</label>
+      <br />
+      <input type="checkbox" id="useMask" checked />
+      <label>Use Mask</label>
+      <br />
+      <select id="select">
+        <option>Normal Eye1</option>
+        <option>Normal Eye2</option>
+        <option>Normal Eye3</option>
+        <option>Mangekyo Sharingan 1</option>
+        <option>Mangekyo Sharingan 2</option>
+        <option>Mangekyo Sharingan 3</option>
+        <option>Mangekyo Sharingan 4</option>
+        <option>Mangekyo Sharingan 5</option>
+        <option>Mangekyo Sharingan 6</option>
+        <option>Mangekyo Sharingan 7</option>
+        <option>Mangekyo Sharingan 8</option>
+        <option>Mangekyo Sharingan 9</option>
+        <option>Ethernal Mangekyo Sharingan 1</option>
+        <option>Ethernal Mangekyo Sharingan 2</option>
+        <option>Rinnegan 1</option>
+        <option>Rinnegan 2</option>
+        <option>Rinne Sharingan 1</option>
+      </select>
+      <br />
+      <button onclick="SettingsSet()">Set</button>
+    </div>
     <script src="main.js"></script>
   </body>
 </html>
